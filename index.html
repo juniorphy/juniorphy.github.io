@@ -53,24 +53,25 @@
   <div class="fact-category" id="category">Science</div>
   <div class="fact-box" id="fact">Did you know? Honey never spoils. Archaeologists have eaten 3000-year-old honey and found it perfectly edible!</div>
   <button onclick="showRandomFact()">Show Me Another Fact!</button>
+<script>
+  const facts = [
+    {category: "Science", fact: "Bananas are berries, but strawberries are not."},
+    {category: "Science", fact: "Octopuses have three hearts and blue blood."},
+    {category: "Science", fact: "A teaspoon of neutron star material would weigh about 6 billion tons."},
+    {category: "Science", fact: "Water can boil and freeze at the same time, a phenomenon called the 'triple point.'"},
+    {category: "Science", fact: "Honey never spoils. Archaeologists have found edible honey in ancient Egyptian tombs."},
+    {category: "Science", fact: "Humans share about 60% of their DNA with bananas."},
+    {category: "Science", fact: "The Eiffel Tower can be 15 cm taller during hot days due to thermal expansion."},
+    {category: "Science", fact: "Lightning strikes the Earth about 100 times every second."},
+    {category: "Science", fact: "Venus is the only planet to spin clockwise."},
+    {category: "Science", fact: "Hot water can freeze faster than cold water, a phenomenon known as the Mpemba effect."}
+  ];
 
-  <script>
-    const facts = [
-      {category: "Science", fact: "Bananas are berries, but strawberries are not."},
-      {category: "Animals", fact: "Octopuses have three hearts."},
-      {category: "Space", fact: "A day on Venus is longer than its year."},
-      {category: "History", fact: "Napoleon was once attacked by a horde of rabbits."},
-      {category: "Technology", fact: "The first computer mouse was made of wood."},
-      {category: "Food", fact: "Honey never spoils. Archaeologists have eaten 3000-year-old honey and found it perfectly edible!"},
-      {category: "Nature", fact: "A group of flamingos is called a 'flamboyance'."},
-      {category: "Sports", fact: "Golf is the only sport played on the moon."}
-    ];
-
-    function showRandomFact() {
-      const random = facts[Math.floor(Math.random() * facts.length)];
-      document.getElementById('category').textContent = random.category;
-      document.getElementById('fact').textContent = random.fact;
-    }
-  </script>
+  function showRandomFact() {
+    const random = facts[Math.floor(Math.random() * facts.length)];
+    document.getElementById('category').textContent = random.category;
+    document.getElementById('fact').textContent = random.fact;
+  }
+</script>
 </body>
 </html>
